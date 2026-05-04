@@ -100,7 +100,6 @@ themeToggle.addEventListener("click", () => {
     localStorage.setItem("theme", newTheme); // حفظ الاختيار
 });
 
-// عند تحميل الصفحة، تأكد من الثيم المحفوظ
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
     document.documentElement.setAttribute("data-theme", savedTheme);
