@@ -1,7 +1,7 @@
 /* تنسيق الصفحة العام */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #d8a7d8; /* اللون اللي حاببته من الصور */
+    background-color: #d8a7d8; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,7 +111,6 @@ li.priority-low { border-left: 10px solid #00c851; }
 
 .delete-btn { background: #ff9f75; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
 
-/* موبايل */
 @media (max-width: 800px) {
     .main-layout { flex-direction: column; text-align: center; }
 }
