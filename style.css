@@ -1,0 +1,117 @@
+/* تنسيق الصفحة العام */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d8a7d8; /* اللون اللي حاببته من الصور */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.main-layout {
+    display: flex;
+    gap: 40px;
+    max-width: 1000px;
+    width: 90%;
+    align-items: center;
+}
+
+/* قسم النبذة */
+.intro-section {
+    flex: 1;
+    color: white;
+}
+
+.intro-section h2 { font-size: 2.5rem; margin-bottom: 10px; }
+.intro-section p { font-size: 1.1rem; opacity: 0.9; line-height: 1.5; }
+
+.features { display: flex; gap: 10px; margin-top: 20px; }
+.features span { background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; }
+
+/* صندوق المهام */
+.container {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.task-stats { display: flex; justify-content: space-around; margin-bottom: 20px; color: #555; font-weight: bold; }
+
+.input-section { display: flex; gap: 10px; margin-bottom: 20px; }
+
+input, select, button {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+input { flex: 2; }
+select { flex: 1; cursor: pointer; }
+button { background: #ff9f75; color: white; cursor: pointer; font-weight: bold; transition: 0.3s; }
+button:hover { background: #ff8552; }
+
+/* تنسيق القائمة والمهام */
+ul { list-style: none; padding: 0; }
+
+li {
+    background: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+/* تعريف الألوان */
+:root {
+    --bg-color: #d8a7d8;
+    --container-bg: rgba(255, 255, 255, 0.3);
+    --text-color: #333;
+    --item-bg: white;
+}
+
+/* ألوان الوضع الليلي */
+[data-theme="dark"] {
+    --bg-color: #2c3e50;
+    --container-bg: rgba(0, 0, 0, 0.5);
+    --text-color: #ecf0f1;
+    --item-bg: #34495e;
+}
+
+/* تحديث العناصر لتستخدم المتغيرات */
+body { background-color: var(--bg-color); transition: 0.5s; }
+.container { background: var(--container-bg); color: var(--text-color); }
+li { background: var(--item-bg); color: var(--text-color); }
+
+/* تنسيق زر المود */
+.theme-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    background: var(--item-bg);
+    color: var(--text-color);
+    border: 1px solid #ccc;
+}
+
+/* ألوان الأولويات */
+li.priority-high { border-left: 10px solid #ff4d4d; }
+li.priority-medium { border-left: 10px solid #ffcc00; }
+li.priority-low { border-left: 10px solid #00c851; }
+
+.completed span { text-decoration: line-through; opacity: 0.5; }
+
+.delete-btn { background: #ff9f75; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+
+/* موبايل */
+@media (max-width: 800px) {
+    .main-layout { flex-direction: column; text-align: center; }
+}

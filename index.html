@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - My To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <!-- زر تبديل الوضع الليلي -->
+    <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+    
+    <h1>My Tasks</h1>
+    ...
+
+    <div class="main-layout">
+        <!-- قسم النبذة عن المشروع -->
+        <section class="intro-section">
+            <h2>About TaskFlow</h2>
+            <p>A minimalist tool designed to help you organize your daily work and boost your productivity. Simple, fast, and stays with you.</p>
+            <div class="features">
+                <span>✓ Auto-save</span>
+                <span>✓ Fast</span>
+                <span>✓ Secure</span>
+            </div>
+        </section>
+
+        <!-- صندوق المهام المطور -->
+        <div class="container">
+            <h1>My Tasks</h1>
+            
+            <!-- عداد المهام -->
+            <div class="task-stats">
+                <span id="pendingCount">Pending: 0</span>
+                <span id="completedCount">Completed: 0</span>
+            </div>
+
+            <div class="input-section">
+                <input type="text" id="taskInput" placeholder="What needs to be done?">
+                
+                <!-- قائمة الأولويات -->
+                <select id="priorityInput">
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                </select>
+                
+                <button onclick="addTask()">Add</button>
+            </div>
+
+            <!-- القائمة اللي بتظهر فيها المهام -->
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+
+    <!-- ربط الجافا سكريبت في النهاية لضمان التشغيل السليم -->
+    <script src="script.js"></script>
+</body>
+</html>
